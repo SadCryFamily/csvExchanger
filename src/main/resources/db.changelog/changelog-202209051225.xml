@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+    <changeSet id="1" author="Semen Gulenko">
+        <createTable tableName="university">
+            <column name="id" type="bigserial">
+                <constraints primaryKeyName="pk_university_id" primaryKey="true"/>
+            </column>
+            <column name="state" type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column name="institution_type" type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column name="phone_number" type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column name="website" type="text">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
